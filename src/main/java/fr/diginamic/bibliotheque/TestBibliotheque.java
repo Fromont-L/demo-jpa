@@ -72,8 +72,10 @@ public class TestBibliotheque {
         EntityTransaction et2 = em3.getTransaction();
         et2.begin();
 
+        // Récupérer un emprunt
         Emprunt e = em3.find(Emprunt.class, emprunt.getId());
 
+        // Créer un nouveau livre
         Livre nouveauLivre = new Livre("Le temps des raclettes", "Riche Mont");
         em3.persist(nouveauLivre);
 

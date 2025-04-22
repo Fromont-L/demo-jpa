@@ -5,6 +5,8 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
     <persistence-unit name="pu_essai" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
+            <!-- Je sais que je suis toujours dans la même bdd que le premier exercice il n'a aucune logique,
+            mais je fais mes tests dessus, je sais que je suis sensé le changer pour chaque projet mais c'était plus rapide -->
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/recensement" />
             <property name="jakarta.persistence.jdbc.user" value="root" />
             <property name="jakarta.persistence.jdbc.password" value="" />

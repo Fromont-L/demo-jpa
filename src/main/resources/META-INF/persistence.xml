@@ -4,10 +4,22 @@
 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
     <persistence-unit name="pu_essai" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Désactiver pour les TP avant le TP 06 - Requêtes JPQL-->
+        <class>fr.diginamic.jpql.Acteur</class>
+        <class>fr.diginamic.jpql.Film</class>
+        <class>fr.diginamic.jpql.Genre</class>
+        <class>fr.diginamic.jpql.Pays</class>
+        <class>fr.diginamic.jpql.Realisateur</class>
+        <class>fr.diginamic.jpql.Role</class>
+
         <properties>
             <!-- Je sais que je suis toujours dans la même bdd que le premier exercice il n'a aucune logique,
-            mais je fais mes tests dessus, je sais que je suis sensé le changer pour chaque projet mais c'était plus rapide -->
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/recensement" />
+            mais je fais mes tests dessus, je sais que je suis censé le changer pour chaque projet mais c'était plus rapide -->
+            <!--À réactiver pour les TP 01 à 05-->
+            <!--<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/recensement" />-->
+            <!--À désactiver pour les TP avant le TP 06 - Requêtes JPQL-->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/filmsjpql" />
+
             <property name="jakarta.persistence.jdbc.user" value="root" />
             <property name="jakarta.persistence.jdbc.password" value="" />
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
@@ -15,6 +27,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
             <!--
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
             -->
+
             <property name="hibernate.hbm2ddl.auto" value="update"/>
 
         </properties>
